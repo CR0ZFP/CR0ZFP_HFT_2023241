@@ -28,10 +28,7 @@ namespace CR0ZFP_HFT_202324.Models
             Products = new HashSet<Product>();
         }
 
-        public Order()
-        {
-            
-        }
+        
 
         public Order(string line)
         {
