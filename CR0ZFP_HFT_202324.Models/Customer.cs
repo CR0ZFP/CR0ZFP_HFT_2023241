@@ -13,6 +13,7 @@ namespace CR0ZFP_HFT_202324.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerID { get; set; }
 
+        [Required]
         [StringLength(240)]
         public string CustomerName { get; set; }
 
@@ -22,16 +23,14 @@ namespace CR0ZFP_HFT_202324.Models
         [StringLength(240)]
         public string Address { get; set; }
 
+        [Required]
+        public int Age { get; set; }
+
         public virtual ICollection<Order> Orders {get;set;}
 
         public Customer ()
         {
             Orders = new HashSet<Order> ();
-        }
-
-        public Customer()
-        {
-            
         }
 
         public Customer (string line)
@@ -41,6 +40,7 @@ namespace CR0ZFP_HFT_202324.Models
             this.CustomerName = data[1];
             this.Email = data[2];
             this.Address = data[3];
+            this.Age = int.Parse(data[4]);
             Orders = new HashSet<Order>();
         }
 
