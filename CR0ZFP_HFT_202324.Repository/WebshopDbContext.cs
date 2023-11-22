@@ -37,10 +37,10 @@ namespace CR0ZFP_HFT_202324.Repository
 
             modelBuilder.Entity<Customer>().HasData(new Customer[]
             {
-                new Customer("1#Fred#fred100@gmail.com#Vas"),
-                new Customer("2#Steve#steve100@gmail.com#Zala"),
-                new Customer("3#George#georg100@gmail.com#Baranya"),
-                new Customer("4#John#John100@gmail.com#Tolna")
+                new Customer("1#Fred#fred100@gmail.com#Vas#20"),
+                new Customer("2#Steve#steve100@gmail.com#Zala#19"),
+                new Customer("3#George#georg100@gmail.com#Baranya#45"),
+                new Customer("4#John#John100@gmail.com#Tolna#34")
             });
 
             modelBuilder.Entity<Product>().HasData(new Product[]
