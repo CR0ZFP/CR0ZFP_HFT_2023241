@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Castle.Core.Internal;
 using CR0ZFP_HFT_202324.Models;
 using CR0ZFP_HFT_202324.Repository;
-using CR0ZFP_HFT_2023241.Logic.Interfaces;
+using CR0ZFP_HFT_2023241.Logic;
 
-namespace CR0ZFP_HFT_2023241.Logic.Classes
+namespace CR0ZFP_HFT_2023241.Logic
 {
     public class ProductLogic : IProductLogic
     {
@@ -20,7 +21,7 @@ namespace CR0ZFP_HFT_2023241.Logic.Classes
 
         public void Create(Product item)
         {
-            if (item.ProductName is null)
+            if (item.ProductName.IsNullOrEmpty())
             {
                 throw new ArgumentException("Must have a name");
             }
@@ -54,8 +55,14 @@ namespace CR0ZFP_HFT_2023241.Logic.Classes
 
         public double GetAvaragePrice()
         {
-            return repository.ReadAll().Average(t => t.Price);
+            return Math.Round(repository.ReadAll().Average(t => t.Price));
         }
+
+        public Product MostValuableProduct ()
+        {
+            return repository.ReadAll().Where(t=>t.Price.Equals(repository.ReadAll().Max(x=>x.Price))).FirstOrDefault();
+        }
+
 
     }
 }

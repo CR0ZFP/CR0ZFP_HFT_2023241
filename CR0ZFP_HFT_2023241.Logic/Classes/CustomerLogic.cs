@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using CR0ZFP_HFT_202324.Models;
 using CR0ZFP_HFT_202324.Repository;
-using CR0ZFP_HFT_2023241.Logic.Interfaces;
+using CR0ZFP_HFT_2023241.Logic;
 
-namespace CR0ZFP_HFT_2023241.Logic.Classes
+namespace CR0ZFP_HFT_2023241.Logic
 {
     public class CustomerLogic : ICustomerLogic
     {

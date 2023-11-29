@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using CR0ZFP_HFT_202324.Models;
 using CR0ZFP_HFT_202324.Repository;
-using CR0ZFP_HFT_2023241.Logic.Interfaces;
+using CR0ZFP_HFT_2023241.Logic;
 
-namespace CR0ZFP_HFT_2023241.Logic.Classes
+namespace CR0ZFP_HFT_2023241.Logic
 {
     public class OrderLogic : IOrderLogic
     {
@@ -66,25 +66,28 @@ namespace CR0ZFP_HFT_2023241.Logic.Classes
             else { throw new ArgumentException("Theres no such option"); }
         }
 
-        public double GetFullPrice(int Id)
-        {
-            double price = 0;
-            foreach (Product products in repository.Read(Id).Products)
-            {
-                price += products.Price;
-            }
+        //public double GetFullPrice(int Id)
+        //{
+        //    double price = 0;
+        //    foreach (Product products in repository.Read(Id).Products)
+        //    {
+        //        price += products.Price;
+        //    }
 
-            return price;
-        }
+        //    return price;
+        //}
 
-        public double GetFullWeight(int Id)
-        {
-            double weight = 0;
-            foreach (Product products in repository.Read(Id).Products)
-            {
-                weight += products.Weight;
-            }
-            return weight;
+        //public double GetFullWeight(int Id)
+        //{
+        //    double weight = 0;
+        //    foreach (Product products in repository.Read(Id).Products)
+        //    {
+        //        weight += products.Weight;
+        //    }
+        //    return weight;
+        //}
+
+        
         }
     }
-}
+
