@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace CR0ZFP_HFT_202324.Models
 {
@@ -23,7 +24,7 @@ namespace CR0ZFP_HFT_202324.Models
         public double Weight { get; set; }
 
         public double Price { get; set; }
-
+        [JsonIgnore]
         public virtual Order Order { get; set; }
 
         public Product()
@@ -41,6 +42,21 @@ namespace CR0ZFP_HFT_202324.Models
             this.Weight = double.Parse(data[3]);
             this.Price = double.Parse(data[4]);
 
+        }
+
+        public override bool Equals(object obj)
+        {
+            Product P = obj as Product;
+            if (P == null)
+            {
+                return false;
+            }
+            else return this.ProductID == P.ProductID;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(this.ProductID);
         }
     }
 }
