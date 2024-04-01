@@ -66,16 +66,16 @@ namespace CR0ZFP_HFT_2023241.Logic
             else { throw new ArgumentException("Theres no such option"); }
         }
 
-        //public double GetFullPrice(int Id)
-        //{
-        //    double price = 0;
-        //    foreach (Product products in repository.Read(Id).Products)
-        //    {
-        //        price += products.Price;
-        //    }
+        public double GetFullPrice(int Id)
+        {
+            double price = 0;
+            foreach (Product products in repository.Read(Id).Products)
+            {
+                price += products.Price;
+            }
 
-        //    return price;
-        //}
+            return price;
+        }
 
         //public double GetFullWeight(int Id)
         //{
@@ -87,7 +87,7 @@ namespace CR0ZFP_HFT_2023241.Logic
         //    return weight;
         //}
 
-        
-        }
+
+    }
     }
 

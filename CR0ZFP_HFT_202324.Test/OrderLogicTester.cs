@@ -136,13 +136,13 @@ namespace CR0ZFP_HFT_202324.Test
 
 
 
-        //[Test]
-        //public void GetFullPriceTest ()
-        //{
-        //    double expected = logic.GetFullPrice(10);
-        //    double actual = 1350;
+        [Test]
+        public void GetFullPriceTest()
+        {
+            double expected = logic.GetFullPrice(10);
+            double actual = 1350;
 
-        //    Assert.AreEqual(expected, actual);
-        //}
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

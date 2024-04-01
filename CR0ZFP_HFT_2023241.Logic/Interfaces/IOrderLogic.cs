@@ -10,7 +10,7 @@ namespace CR0ZFP_HFT_2023241.Logic
         void Create(Order item);
         void Delete(int id);
         List<Order> GetOrdersByDate(DateTime Date, int option);
-        //double GetFullPrice(int Id);
+        double GetFullPrice(int Id);
         //double GetFullWeight(int Id);
         Order Read(int id);
         IQueryable<Order> ReadAll();
