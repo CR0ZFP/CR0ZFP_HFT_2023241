@@ -21,8 +21,12 @@ namespace CR0ZFP_HFT_202324.Repository
             var oldOrder = Read(item.OrderID);
             foreach (var prop in oldOrder.GetType().GetProperties())
             {
-                prop.SetValue(oldOrder, prop.GetValue(item));
+                if (prop.GetAccessors().FirstOrDefault(t => t.IsVirtual) == null)
+                {
+                    prop.SetValue(oldOrder, prop.GetValue(item));
+                }
             }
+            ctx.SaveChanges();
         }
     }
 }
