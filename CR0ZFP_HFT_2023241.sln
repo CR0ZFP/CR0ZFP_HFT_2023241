@@ -26,6 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{85F534
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebshopDBApp.WpfClient", "WebshopDBApp.WpfClient\WebshopDBApp.WpfClient.csproj", "{679CEBAC-ED9C-40D6-BDB4-A10FCA9651F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55539B05-8DA4-4269-B41D-4C21D189818D} = {55539B05-8DA4-4269-B41D-4C21D189818D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +61,10 @@ Global
 		{011E0BFD-43C9-4543-B874-9ACB88115140}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{011E0BFD-43C9-4543-B874-9ACB88115140}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{011E0BFD-43C9-4543-B874-9ACB88115140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679CEBAC-ED9C-40D6-BDB4-A10FCA9651F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679CEBAC-ED9C-40D6-BDB4-A10FCA9651F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679CEBAC-ED9C-40D6-BDB4-A10FCA9651F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679CEBAC-ED9C-40D6-BDB4-A10FCA9651F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +76,7 @@ Global
 		{EC3FF025-3825-4D33-AE25-5198EBC83EF9} = {D595ADDC-C18D-4043-93DC-1ACABFD97700}
 		{3DE9782E-00C5-4196-84EC-33F45B78C827} = {D595ADDC-C18D-4043-93DC-1ACABFD97700}
 		{011E0BFD-43C9-4543-B874-9ACB88115140} = {D595ADDC-C18D-4043-93DC-1ACABFD97700}
+		{679CEBAC-ED9C-40D6-BDB4-A10FCA9651F1} = {F36BE3CF-B099-4387-8177-EAB8F254F126}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C69D4ADE-0A51-4286-9B17-1A6B94F51E4B}
