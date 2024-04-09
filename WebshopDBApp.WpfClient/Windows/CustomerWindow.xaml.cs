@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace WebshopDBApp.WpfClient
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomerWindow.xaml
     /// </summary>
     public partial class CustomerWindow: Window
     {

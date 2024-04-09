@@ -28,13 +28,13 @@
 
         </ListBox>
         <StackPanel Grid.Column="1">
-            <Label Content="Name:" Background="SteelBlue"/>
+            <Label Content="Name:" Background="LightBlue"/>
             <TextBox Text="{Binding SelectedCustomer.CustomerName}"/>
-            <Label Content="Adress:" Background="SteelBlue"/>
+            <Label Content="Adress:" Background="LightBlue"/>
             <TextBox Text="{Binding SelectedCustomer.Address}"/>
-            <Label Content="Email:" Background="SteelBlue"/>
+            <Label Content="Email:" Background="LightBlue"/>
             <TextBox Text="{Binding SelectedCustomer.Email}"/>
-            <Label Content="Age:" Background="SteelBlue"/>
+            <Label Content="Age:" Background="LightBlue"/>
             <TextBox Text="{Binding SelectedCustomer.Age}"/>
 
             <Button Content="Create Customer" Margin="0,10,0,5" Command="{Binding CreateCustomerCommand}"/>

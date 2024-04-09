@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Xps.Serialization;
+using WebshopDBApp.WpfClient.ViewModells;
 
 namespace WebshopDBApp.WpfClient
 {
@@ -55,7 +56,7 @@ namespace WebshopDBApp.WpfClient
         {
             if (!IsInDesignMode)
             {
-                Customers = new RestCollection<Customer>("http://localhost:34970/", "customer");
+                Customers = new RestCollection<Customer>("http://localhost:34970/", "customer", "hub");
 
                 CreateCustomerCommand = new RelayCommand(() =>
                 {
@@ -73,6 +74,8 @@ namespace WebshopDBApp.WpfClient
                     try
                     {
                         Customers.Update(SelectedCustomer);
+                        
+
 
                     }
                     catch (ArgumentException e)
@@ -85,8 +88,6 @@ namespace WebshopDBApp.WpfClient
                 DeleteCustomerCommand = new RelayCommand(() =>
                 {
                     Customers.Delete(SelectedCustomer.CustomerID);
-
-
                 }, () =>
                 {
                     return selectedCustomer != null;
