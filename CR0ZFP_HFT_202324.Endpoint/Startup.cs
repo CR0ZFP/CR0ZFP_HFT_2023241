@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CR0ZFP_HFT_202324.Endpoint.Services;
 using CR0ZFP_HFT_202324.Models;
 using CR0ZFP_HFT_202324.Repository;
 using CR0ZFP_HFT_2023241.Logic;
@@ -39,6 +40,8 @@ namespace CR0ZFP_HFT_202324.Endpoint
             services.AddTransient<IOrderLogic, OrderLogic>();
             services.AddTransient<IProductLogic, ProductLogic>();
 
+            services.AddSignalR();
+
             services.AddControllers();
             services.AddSwaggerGen(c=> { c.SwaggerDoc("v1", new OpenApiInfo { Title = "CR0ZFP_HFT_202324.Endpoint", Version = "v1" }); });
         }
@@ -70,6 +73,7 @@ namespace CR0ZFP_HFT_202324.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }
